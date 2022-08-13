@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MUSTERIGIRISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'MUSTERIGIRIS.dbo.GIRIS_CIKIS_ZAMAN' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="GIRIS_CIKIS_ZAMAN">
+          <Property Name="ID" Type="int" />
+          <Property Name="GIRIS_DATE" Type="datetime" />
+          <Property Name="CIKIS_DATE" Type="datetime" />
+        </EntityType>-->
+  <EntityType Name="MUSTERILER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KULLANICI_ADI" Type="nvarchar" MaxLength="50" />
+    <Property Name="SIFRE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="MUSTERIGIRISModelStoreContainer">
+    <EntitySet Name="MUSTERILER" EntityType="Self.MUSTERILER" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
